@@ -1,0 +1,28 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+/broadcast
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+node_modules
+
+dist/
+
+cache_hardhat/
+
+typechain-types/
+
+artifacts/
+
+mnemonic.txt
+
+wallets
+
+profanity/tx-configs.json
