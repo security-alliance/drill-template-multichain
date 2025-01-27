@@ -1,0 +1,13 @@
+{
+  "name": "Multichain Drill Optimism Testnet",
+  "slug": "multichain-drill-optimism-testnet",
+  "chainId": 10,
+  "blockNumber": "0x7ce2595",
+  "adminRpcUrl": "https://virtual.optimism.rpc.tenderly.co/cded7a40-7aff-4970-b78d-e70e5c5de603",
+  "publicRpcUrl": "https://virtual.optimism.rpc.tenderly.co/dd45e684-50e6-45a5-8ab6-a465a9a5376f",
+  "timestamp": 1737998717101,
+  "validationData": {
+    "confirmedChainId": 10,
+    "confirmedBlockNumber": 130950549
+  }
+}

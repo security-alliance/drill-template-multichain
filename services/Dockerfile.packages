@@ -1,0 +1,51 @@
+FROM node:20.8.1-bullseye-slim as base
+
+# Base: install deps
+RUN apt-get update && apt-get install -y \
+  curl \
+  jq \
+  python3 \
+  ca-certificates \
+  git \
+  g++ \
+  make \
+  gcc \
+  musl-dev \
+  bash \
+  # the following 4 deps are needed for node-hid
+  # which is a deep sub dependency of ethers to install
+  # correctly
+  pkg-config \
+  libusb-1.0-0-dev \
+  libudev-dev \
+  --no-install-recommends
+
+RUN npm install pnpm --global
+
+
+ARG CACHEBUST=3
+WORKDIR /opt/seal
+
+
+# Copy services folder
+COPY ./services ./services
+# Remove the symlink if it exists
+RUN rm -rf ./services/lib/sealnet-lib
+# Copy foundry lib directly to the destination
+COPY ./foundry/ts/src/lib ./services/lib/sealnet-lib
+
+
+WORKDIR /opt/seal/services
+
+RUN CI=1 pnpm install --verbose --no-frozen-lockfile
+
+
+# CMD ["tail", "-f", "/dev/null"]
+
+ENTRYPOINT ["pnpm", "run"]
+
+
+FROM base as monitor
+WORKDIR /opt/seal/services
+CMD ["start:monitor"]
+

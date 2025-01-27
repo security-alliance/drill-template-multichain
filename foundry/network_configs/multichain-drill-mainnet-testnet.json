@@ -1,0 +1,13 @@
+{
+  "name": "Multichain Drill Mainnet Testnet",
+  "slug": "multichain-drill-mainnet-testnet",
+  "chainId": 1,
+  "blockNumber": "0x14abfb9",
+  "adminRpcUrl": "https://virtual.mainnet.rpc.tenderly.co/16b88225-bfbd-4d90-a8f3-857c82cbef99",
+  "publicRpcUrl": "https://virtual.mainnet.rpc.tenderly.co/c621e29c-6248-4f62-abbb-3dbc5a26c57f",
+  "timestamp": 1737998691593,
+  "validationData": {
+    "confirmedChainId": 1,
+    "confirmedBlockNumber": 21675961
+  }
+}
