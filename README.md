@@ -14,6 +14,9 @@ This project provides infrastructure to:
 
 ## Architecture
 
+![image](https://github.com/user-attachments/assets/a377f54b-7262-47be-8515-da9aab2cedf1)
+
+
 ### Test Networks
 - Configurable forks of Ethereum mainnet and Optimism
 - Uses Tenderly Virtual Testnets for testing environments (could be extended to use Anvil)
@@ -61,20 +64,6 @@ This project provides infrastructure to:
 - Docker
 - Foundry
 - Tenderly API access
-
-### Installation
-
-#### Install dependencies
-
-```bash
-cd foundry
-pnpm install
-cd ..
-cd services
-pnpm install
-```
-
-
 
 
 ## Repository Structure
